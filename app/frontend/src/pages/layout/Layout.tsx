@@ -14,25 +14,26 @@ const Layout = () => {
                         <h3 className={styles.headerTitle}>Optus GPT | Sample</h3>
                     </Link>
                     <nav>
-                        <ul className={styles.headerNavList}>
-                            <li>
+                        <ul className={styles.headerNav}>
+                            <li className={styles.headerNavItem}>
                                 <NavLink to="/" className={({ isActive }) => (isActive ? styles.headerNavPageLinkActive : styles.headerNavPageLink)}>
                                     Chat
                                 </NavLink>
                             </li>
-                            <li className={styles.headerNavLeftMargin}>
+                            <li className={styles.headerNavItem}>
                                 <a href="https://www.optus.com.au/" target={"_blank"} title="Optus homepage">
                                     <img
                                         src={optus}
                                         alt="Optus logo"
                                         aria-label="Link to optus homepage"
-                                        width="20px"
-                                        height="20px"
+                                        width="80px"
+                                        height="80px"
                                         className={styles.githubLogo}
+                                        style={{ margin: "0 auto" }}
                                     />
                                 </a>
                             </li>
-                            <li className={styles.headerNavLeftMargin}>
+                            <li className={styles.headerNavItem}>
                                 <NavLink to="/qa" className={({ isActive }) => (isActive ? styles.headerNavPageLinkActive : styles.headerNavPageLink)}>
                                     Ask a question
                                 </NavLink>
