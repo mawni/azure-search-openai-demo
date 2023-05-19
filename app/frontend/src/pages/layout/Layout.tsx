@@ -1,6 +1,7 @@
 import { Outlet, NavLink, Link } from "react-router-dom";
 
 import github from "../../assets/github.svg";
+import optus from "../../assets/optus.svg";
 
 import styles from "./Layout.module.css";
 
@@ -10,7 +11,7 @@ const Layout = () => {
             <header className={styles.header} role={"banner"}>
                 <div className={styles.headerContainer}>
                     <Link to="/" className={styles.headerTitleContainer}>
-                        <h3 className={styles.headerTitle}>GPT + Enterprise data | Sample</h3>
+                        <h3 className={styles.headerTitle}>Optus GPT | Sample</h3>
                     </Link>
                     <nav>
                         <ul className={styles.headerNavList}>
@@ -20,21 +21,21 @@ const Layout = () => {
                                 </NavLink>
                             </li>
                             <li className={styles.headerNavLeftMargin}>
-                                <NavLink to="/qa" className={({ isActive }) => (isActive ? styles.headerNavPageLinkActive : styles.headerNavPageLink)}>
-                                    Ask a question
-                                </NavLink>
-                            </li>
-                            <li className={styles.headerNavLeftMargin}>
-                                <a href="https://aka.ms/entgptsearch" target={"_blank"} title="Github repository link">
+                                <a href="https://www.optus.com.au/" target={"_blank"} title="Optus homepage">
                                     <img
-                                        src={github}
-                                        alt="Github logo"
-                                        aria-label="Link to github repository"
+                                        src={optus}
+                                        alt="Optus logo"
+                                        aria-label="Link to optus homepage"
                                         width="20px"
                                         height="20px"
                                         className={styles.githubLogo}
                                     />
                                 </a>
+                            </li>
+                            <li className={styles.headerNavLeftMargin}>
+                                <NavLink to="/qa" className={({ isActive }) => (isActive ? styles.headerNavPageLinkActive : styles.headerNavPageLink)}>
+                                    Ask a question
+                                </NavLink>
                             </li>
                         </ul>
                     </nav>
